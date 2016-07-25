@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		E93F2DB51D46B97100EBFAAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DB41D46B97100EBFAAB /* AppDelegate.swift */; };
-		E93F2DB71D46B97100EBFAAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DB61D46B97100EBFAAB /* ViewController.swift */; };
 		E93F2DBA1D46B97100EBFAAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93F2DB81D46B97100EBFAAB /* Main.storyboard */; };
 		E93F2DBD1D46B97100EBFAAB /* MedsNotification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DBB1D46B97100EBFAAB /* MedsNotification.xcdatamodeld */; };
 		E93F2DBF1D46B97100EBFAAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E93F2DBE1D46B97100EBFAAB /* Assets.xcassets */; };
 		E93F2DC21D46B97100EBFAAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93F2DC01D46B97100EBFAAB /* LaunchScreen.storyboard */; };
+		E93F2DCA1D46BDF600EBFAAB /* TrackerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DC91D46BDF600EBFAAB /* TrackerVC.swift */; };
+		E93F2DCC1D46BE2F00EBFAAB /* AddEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DCB1D46BE2F00EBFAAB /* AddEditVC.swift */; };
+		E93F2DCE1D46BE6A00EBFAAB /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DCD1D46BE6A00EBFAAB /* MainTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E93F2DB11D46B97100EBFAAB /* MedsNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedsNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93F2DB41D46B97100EBFAAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E93F2DB61D46B97100EBFAAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E93F2DB91D46B97100EBFAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E93F2DBC1D46B97100EBFAAB /* MedsNotification.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedsNotification.xcdatamodel; sourceTree = "<group>"; };
 		E93F2DBE1D46B97100EBFAAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E93F2DC11D46B97100EBFAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E93F2DC31D46B97100EBFAAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E93F2DC91D46BDF600EBFAAB /* TrackerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackerVC.swift; path = ../TrackerVC.swift; sourceTree = "<group>"; };
+		E93F2DCB1D46BE2F00EBFAAB /* AddEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddEditVC.swift; path = ../AddEditVC.swift; sourceTree = "<group>"; };
+		E93F2DCD1D46BE6A00EBFAAB /* MainTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTVC.swift; path = ../MainTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				E93F2DB41D46B97100EBFAAB /* AppDelegate.swift */,
-				E93F2DB61D46B97100EBFAAB /* ViewController.swift */,
+				E93F2DC91D46BDF600EBFAAB /* TrackerVC.swift */,
+				E93F2DCB1D46BE2F00EBFAAB /* AddEditVC.swift */,
+				E93F2DCD1D46BE6A00EBFAAB /* MainTVC.swift */,
 				E93F2DB81D46B97100EBFAAB /* Main.storyboard */,
 				E93F2DBE1D46B97100EBFAAB /* Assets.xcassets */,
 				E93F2DC01D46B97100EBFAAB /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E93F2DB71D46B97100EBFAAB /* ViewController.swift in Sources */,
+				E93F2DCE1D46BE6A00EBFAAB /* MainTVC.swift in Sources */,
 				E93F2DB51D46B97100EBFAAB /* AppDelegate.swift in Sources */,
+				E93F2DCA1D46BDF600EBFAAB /* TrackerVC.swift in Sources */,
+				E93F2DCC1D46BE2F00EBFAAB /* AddEditVC.swift in Sources */,
 				E93F2DBD1D46B97100EBFAAB /* MedsNotification.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
