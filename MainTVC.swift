@@ -11,6 +11,22 @@ import CoreData
 
 class MainTVC: UITableViewController, NSFetchedResultsControllerDelegate {
     
+    // create managed object context (moc) for coredata
+    let moc : NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    // create fetch results controller
+    let frc = NSFetchedResultsController()
+    
+    // create function for fetch request
+    func fetchRequest() -> NSFetchRequest {
+        
+        let fetchRequest = NSFetchRequest(entityName: "Rx")
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return fetchRequest
+    }
+    
     
 
     override func viewDidLoad() {
