@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class MainTVC: UITableViewController {
+class MainTVC: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
