@@ -17,7 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Ask user permission to send them notification alerts.
+        let userNotificationTypes : UIUserNotificationType = ([UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound])
+        
+        let settings = UIUserNotificationSettings(forTypes: userNotificationTypes, categories: nil)
+        application.registerUserNotificationSettings(settings)
+        
+        setupAppearance()
+        
         return true
+    }
+    
+    func setupAppearance() {
+        
+        let navStyle = UINavigationBar.appearance()
+        navStyle.barTintColor = UIColor(red: 46.0 / 255.0, green: 135.0 / 255.0, blue: 174.0 / 255.0, alpha: 1.0)
+        // navigation bar button color
+        navStyle.tintColor = UIColor.blackColor().colorWithAlphaComponent(0.75)
+        // navigation title color
+        navStyle.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGrayColor()]
     }
 
     func applicationWillResignActive(application: UIApplication) {

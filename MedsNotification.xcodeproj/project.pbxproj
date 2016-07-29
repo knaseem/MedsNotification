@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E90EC4E01D47DEF7000A896A /* Rx+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EC4DE1D47DEF7000A896A /* Rx+CoreDataProperties.swift */; };
-		E90EC4E11D47DEF7000A896A /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EC4DF1D47DEF7000A896A /* Rx.swift */; };
+		E923CBAE1D4AA767006719BC /* Rx+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923CBAC1D4AA767006719BC /* Rx+CoreDataProperties.swift */; };
+		E923CBAF1D4AA767006719BC /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E923CBAD1D4AA767006719BC /* Rx.swift */; };
 		E93F2DB51D46B97100EBFAAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DB41D46B97100EBFAAB /* AppDelegate.swift */; };
 		E93F2DBA1D46B97100EBFAAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E93F2DB81D46B97100EBFAAB /* Main.storyboard */; };
 		E93F2DBD1D46B97100EBFAAB /* MedsNotification.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E93F2DBB1D46B97100EBFAAB /* MedsNotification.xcdatamodeld */; };
@@ -20,8 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E90EC4DE1D47DEF7000A896A /* Rx+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		E90EC4DF1D47DEF7000A896A /* Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
+		E923CBAC1D4AA767006719BC /* Rx+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E923CBAD1D4AA767006719BC /* Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
 		E93F2DB11D46B97100EBFAAB /* MedsNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedsNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93F2DB41D46B97100EBFAAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E93F2DB91D46B97100EBFAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,8 +48,8 @@
 		E93F2DA81D46B97100EBFAAB = {
 			isa = PBXGroup;
 			children = (
-				E90EC4DE1D47DEF7000A896A /* Rx+CoreDataProperties.swift */,
-				E90EC4DF1D47DEF7000A896A /* Rx.swift */,
+				E923CBAC1D4AA767006719BC /* Rx+CoreDataProperties.swift */,
+				E923CBAD1D4AA767006719BC /* Rx.swift */,
 				E93F2DB31D46B97100EBFAAB /* MedsNotification */,
 				E93F2DB21D46B97100EBFAAB /* Products */,
 			);
@@ -153,11 +153,11 @@
 			files = (
 				E93F2DCE1D46BE6A00EBFAAB /* MainTVC.swift in Sources */,
 				E93F2DB51D46B97100EBFAAB /* AppDelegate.swift in Sources */,
-				E90EC4E11D47DEF7000A896A /* Rx.swift in Sources */,
+				E923CBAF1D4AA767006719BC /* Rx.swift in Sources */,
 				E93F2DCA1D46BDF600EBFAAB /* TrackerVC.swift in Sources */,
 				E93F2DCC1D46BE2F00EBFAAB /* AddEditVC.swift in Sources */,
 				E93F2DBD1D46B97100EBFAAB /* MedsNotification.xcdatamodeld in Sources */,
-				E90EC4E01D47DEF7000A896A /* Rx+CoreDataProperties.swift in Sources */,
+				E923CBAE1D4AA767006719BC /* Rx+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

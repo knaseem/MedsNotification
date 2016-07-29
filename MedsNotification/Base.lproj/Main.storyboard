@@ -15,26 +15,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="qht-9k-qPQ" detailTextLabel="h5W-Vg-KNB" imageView="Qku-es-n1K" style="IBUITableViewCellStyleSubtitle" id="zKQ-Ox-fjm">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="qht-9k-qPQ" detailTextLabel="h5W-Vg-KNB" imageView="Qku-es-n1K" style="IBUITableViewCellStyleSubtitle" id="zKQ-Ox-fjm">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zKQ-Ox-fjm" id="OSi-bG-5am">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qht-9k-qPQ">
-                                            <rect key="frame" x="74" y="0.0" width="42.5" height="26.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qht-9k-qPQ">
+                                            <rect key="frame" x="74" y="-1" width="38.5" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h5W-Vg-KNB">
-                                            <rect key="frame" x="74" y="26.5" width="50" height="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" id="h5W-Vg-KNB">
+                                            <rect key="frame" x="74" y="24" width="60" height="21.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="shadowOffset" width="2" height="2"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="cellImage" id="Qku-es-n1K">
                                             <rect key="frame" x="15" y="0.0" width="44" height="43.5"/>
@@ -112,18 +115,30 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PqP-oL-Mmo">
                                 <rect key="frame" x="147" y="112" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="morningTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="YNn-8g-pce"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y62-p4-GUh">
                                 <rect key="frame" x="147" y="154" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="noonTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="NHk-Np-zjf"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kba-QX-hrH">
                                 <rect key="frame" x="147" y="196" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="eveningTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="lmU-Md-WXb"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tLj-fV-CPD">
                                 <rect key="frame" x="148" y="238" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="bedtimeTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="mq9-fw-6gw"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPl-sS-UiM">
                                 <rect key="frame" x="24" y="158" width="100" height="21"/>
@@ -164,6 +179,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mhU-Qu-2S9">
                                 <rect key="frame" x="147" y="313" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="morningReminderTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="MUu-fi-Abl"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ 1 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRQ-V7-8ry">
                                 <rect key="frame" x="23" y="361" width="100" height="21"/>
@@ -177,6 +195,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wvn-Tf-Tn0">
                                 <rect key="frame" x="148" y="356" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="noonReminderTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="Qae-oV-tTk"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ 6 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zll-VA-qC3">
                                 <rect key="frame" x="24" y="403" width="100" height="21"/>
@@ -190,6 +211,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pmw-Wk-uvG">
                                 <rect key="frame" x="148" y="401" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="eveningReminderTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="vc8-Oq-SLO"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ 9 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0I-ma-x8q">
                                 <rect key="frame" x="23" y="446" width="100" height="21"/>
@@ -203,6 +227,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="R3H-ik-e5X">
                                 <rect key="frame" x="148" y="442" width="51" height="31"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="bedtimeReminderTapped:" destination="onU-Vt-x83" eventType="valueChanged" id="JCQ-j1-ldE"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Rx reminders." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRB-bB-ksy">
                                 <rect key="frame" x="21" y="281" width="278" height="21"/>
@@ -268,6 +295,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="Track Your Rx" id="Wj1-rJ-Yh1"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="switchBedtime" destination="tLj-fV-CPD" id="haT-qg-6H7"/>
+                        <outlet property="switchEvening" destination="Kba-QX-hrH" id="9TV-lb-tuH"/>
+                        <outlet property="switchMorning" destination="PqP-oL-Mmo" id="WSH-4H-LC0"/>
+                        <outlet property="switchNoon" destination="y62-p4-GUh" id="dqQ-ZK-5gy"/>
+                        <outlet property="switchReminderBedtime" destination="R3H-ik-e5X" id="kgt-pZ-xuM"/>
+                        <outlet property="switchReminderEvening" destination="pmw-Wk-uvG" id="oFk-WG-PUJ"/>
+                        <outlet property="switchReminderMorning" destination="mhU-Qu-2S9" id="rdQ-md-jbe"/>
+                        <outlet property="switchReminderNoon" destination="wvn-Tf-Tn0" id="S7P-dY-K0X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QD7-c5-igh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -300,7 +337,7 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example:  75" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-v0-ZM7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example:  75" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="WXC-v0-ZM7">
                                 <rect key="frame" x="28" y="205" width="129" height="30"/>
                                 <color key="backgroundColor" red="0.75512069463729858" green="0.94194322824478149" blue="0.93885248899459839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -327,7 +364,7 @@
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example:  2.5" textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="rY6-e7-xnx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Example:  2.5" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="rY6-e7-xnx">
                                 <rect key="frame" x="28" y="244" width="129" height="30"/>
                                 <color key="backgroundColor" red="0.75512069463729858" green="0.94194322824478149" blue="0.93885248899459839" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
@@ -358,6 +395,9 @@
                                     <segment title="Bedtime"/>
                                 </segments>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="timeDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="nNa-vZ-s8V"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -397,9 +437,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add/Edit Your Rx" id="IHN-ny-pbg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Q1r-Qj-5rk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Q1r-Qj-5rk">
+                            <connections>
+                                <action selector="saveTapped:" destination="BYZ-38-t0r" id="Y0A-6s-Iog"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="rxDosageMG" destination="WXC-v0-ZM7" id="c6S-o6-LAE"/>
+                        <outlet property="rxDosageML" destination="rY6-e7-xnx" id="0gR-eo-oBe"/>
+                        <outlet property="rxName" destination="knm-xr-P9i" id="B36-X0-oWl"/>
+                        <outlet property="rxPrescribedBy" destination="4MW-c4-lAp" id="HFa-H9-6lR"/>
+                        <outlet property="rxTime" destination="e3f-uu-V2j" id="mzD-IG-49j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

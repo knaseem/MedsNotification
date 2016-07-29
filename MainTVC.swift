@@ -11,104 +11,171 @@ import CoreData
 
 class MainTVC: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    // create managed object context (moc) for coredata
     let moc : NSManagedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
-    // create fetch results controller
-    let frc = NSFetchedResultsController()
+    var frc = NSFetchedResultsController()
     
-    // create function for fetch request
     func fetchRequest() -> NSFetchRequest {
         
         let fetchRequest = NSFetchRequest(entityName: "Rx")
+        
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         
         fetchRequest.sortDescriptors = [sortDescriptor]
+        
         return fetchRequest
+        
     }
     
+    func getFRC() -> NSFetchedResultsController {
+        
+        frc = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        
+        return frc
+        
+    }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        frc = getFRC()
+        frc.delegate = self
+        
+        do {
+            try frc.performFetch()
+        } catch {
+            print("Initial fetch failed")
+            return
+        }
+        
+        // cell properties
+        
+        self.tableView.rowHeight = 75
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg.png"))
+        
     }
-
+    
+    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        let numberOfSections = frc.sections?.count
+        
+        return numberOfSections!
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        let numberOfRowsInSection = frc.sections?[section].numberOfObjects
+        
+        return numberOfRowsInSection!
     }
-
-    /*
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        
+        // set alternating alphas
+        
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.clearColor()
+        } else {
+            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
+            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+        }
+        
         // Configure the cell...
-
+        
+        let rx = frc.objectAtIndexPath(indexPath) as! Rx
+        cell.textLabel?.text = rx.name
+        let prescribedBy = rx.prescribedBy
+        let dosagemg = rx.dosagemg
+        let dosageml = rx.dosageml
+        let time = rx.time
+        
+        cell.detailTextLabel?.text = "\(dosagemg!) mg. / \(dosageml!) ml. at \(time!) by \(prescribedBy!)."
+        
         return cell
     }
-    */
-
+    
+    
     /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
+     // Override to support conditional editing of the table view.
+     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the specified item to be editable.
+     return true
+     }
+     */
+    
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        
+        let managedObject : NSManagedObject = frc.objectAtIndexPath(indexPath) as! NSManagedObject
+        
+        moc.deleteObject(managedObject)
+        
+        do {
+            try moc.save()
+        } catch {
+            print("Failed to save.")
+            return
+        }
+        
     }
-    */
-
+    
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+     // Override to support conditional rearranging of the table view.
+     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "edit" {
+            
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPathForCell(cell)
+            let rxController : AddEditVC = segue.destinationViewController as! AddEditVC
+            
+            let newRx : Rx = frc.objectAtIndexPath(indexPath!) as! Rx
+            
+            rxController.newRx = newRx
+            
+        }
+        
     }
-    */
-
+    
+    
 }
+
+

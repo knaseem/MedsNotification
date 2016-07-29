@@ -2,7 +2,7 @@
 //  Rx+CoreDataProperties.swift
 //  MedsNotification
 //
-//  Created by Khalid Naseem on 26/07/2016.
+//  Created by Khalid Naseem on 28/07/2016.
 //  Copyright © 2016 Khalid Naseem. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,9 +14,10 @@ import CoreData
 
 extension Rx {
 
-    @NSManaged var dosage: String?
+    @NSManaged var dosagemg: String?
     @NSManaged var name: String?
-    @NSManaged var time: String?
     @NSManaged var prescribedBy: String?
+    @NSManaged var time: String?
+    @NSManaged var dosageml: String?
 
 }
