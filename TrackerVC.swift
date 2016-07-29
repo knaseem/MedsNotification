@@ -29,9 +29,52 @@ class TrackerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let dateRecorded = defaults.stringForKey("storedDate") {
+            storedDate = dateRecorded
+        }
         
-
+        currentDate = getDate()
+        if currentDate == storedDate {
+            if let _ = defaults.stringForKey("takenMorning") {
+                switchMorning.setOn(true, animated: true)
+            }
+            if let _ = defaults.stringForKey("takenNoon") {
+                switchNoon.setOn(true, animated: true)
+            }
+            if let _ = defaults.stringForKey("takenEvening") {
+                switchEvening.setOn(true, animated: true)
+            }
+            if let _ = defaults.stringForKey("takenBedtime") {
+                switchBedtime.setOn(true, animated: true)
+            }
+            
+        } else if currentDate != storedDate {
+            defaults.removeObjectForKey("takenMorning")
+            switchMorning.setOn(false, animated: true)
+            
+            defaults.removeObjectForKey("takenNoon")
+            switchNoon.setOn(false, animated: true)
+            
+            defaults.removeObjectForKey("takenEvening")
+            switchEvening.setOn(false, animated: true)
+            
+            defaults.removeObjectForKey("takenBedtime")
+            switchBedtime.setOn(false, animated: true)
+        }
         
+        // Code for Notification switches
+        if let _ = defaults.stringForKey("reminderMorning") {
+            switchReminderMorning.setOn(true, animated: true)
+        }
+        if let _ = defaults.stringForKey("reminderNoon") {
+            switchReminderNoon.setOn(true, animated: true)
+        }
+        if let _ = defaults.stringForKey("reminderEvening") {
+            switchReminderEvening.setOn(true, animated: true)
+        }
+        if let _ = defaults.stringForKey("reminderBedtime") {
+            switchReminderBedtime.setOn(true, animated: true)
+        }
     }
     
     // function to get date so we can compare stored and current date
@@ -40,7 +83,7 @@ class TrackerVC: UIViewController {
         let date = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .NoStyle)
         return date
     }
-
+    
     @IBAction func morningTapped(sender: UISwitch) {
         storedDate = getDate()
         
@@ -57,7 +100,7 @@ class TrackerVC: UIViewController {
         }
         
     }
-
+    
     @IBAction func noonTapped(sender: UISwitch) {
         storedDate = getDate()
         
@@ -72,7 +115,7 @@ class TrackerVC: UIViewController {
             }
             
         }
-
+        
     }
     
     @IBAction func eveningTapped(sender: UISwitch) {
@@ -89,7 +132,7 @@ class TrackerVC: UIViewController {
             }
             
         }
-
+        
     }
     
     @IBAction func bedtimeTapped(sender: UISwitch) {
@@ -106,7 +149,7 @@ class TrackerVC: UIViewController {
             }
             
         }
-
+        
     }
     
     // Reminder Functions
@@ -146,7 +189,7 @@ class TrackerVC: UIViewController {
             let cal = NSCalendar.currentCalendar()
             cal.timeZone = NSCalendar.currentCalendar().timeZone
             let fireDate = cal.dateBySettingHour(13, minute: 0, second: 0, ofDate: theDate, options: NSCalendarOptions())
-            notifyNoon.alertBody = "Did you take your morning pills/meds today?"
+            notifyNoon.alertBody = "Did you take your noon pills/meds today?"
             notifyNoon.repeatInterval = NSCalendarUnit.Day
             notifyNoon.fireDate = fireDate
             notifyNoon.soundName = UILocalNotificationDefaultSoundName
@@ -158,7 +201,7 @@ class TrackerVC: UIViewController {
             defaults.removeObjectForKey("reminderNoon")
             UIApplication.sharedApplication().cancelLocalNotification(notifyNoon)
         }
-
+        
     }
     
     @IBAction func eveningReminderTapped(sender: UISwitch) {
@@ -168,7 +211,7 @@ class TrackerVC: UIViewController {
             let cal = NSCalendar.currentCalendar()
             cal.timeZone = NSCalendar.currentCalendar().timeZone
             let fireDate = cal.dateBySettingHour(18, minute: 0, second: 0, ofDate: theDate, options: NSCalendarOptions())
-            notifyEvening.alertBody = "Did you take your morning pills/meds today?"
+            notifyEvening.alertBody = "Did you take your evening pills/meds today?"
             notifyEvening.repeatInterval = NSCalendarUnit.Day
             notifyEvening.fireDate = fireDate
             notifyEvening.soundName = UILocalNotificationDefaultSoundName
@@ -180,7 +223,7 @@ class TrackerVC: UIViewController {
             defaults.removeObjectForKey("reminderEvening")
             UIApplication.sharedApplication().cancelLocalNotification(notifyEvening)
         }
-
+        
     }
     
     @IBAction func bedtimeReminderTapped(sender: UISwitch) {
@@ -190,7 +233,7 @@ class TrackerVC: UIViewController {
             let cal = NSCalendar.currentCalendar()
             cal.timeZone = NSCalendar.currentCalendar().timeZone
             let fireDate = cal.dateBySettingHour(21, minute: 0, second: 0, ofDate: theDate, options: NSCalendarOptions())
-            notifyBedtime.alertBody = "Did you take your morning pills/meds today?"
+            notifyBedtime.alertBody = "Did you take your bedtime pills/meds today?"
             notifyBedtime.repeatInterval = NSCalendarUnit.Day
             notifyBedtime.fireDate = fireDate
             notifyBedtime.soundName = UILocalNotificationDefaultSoundName
@@ -202,9 +245,9 @@ class TrackerVC: UIViewController {
             defaults.removeObjectForKey("reminderBedtime")
             UIApplication.sharedApplication().cancelLocalNotification(notifyBedtime)
         }
-
+        
     }
     
-    
-    
 }
+
+

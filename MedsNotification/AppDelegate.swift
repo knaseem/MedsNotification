@@ -32,11 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAppearance() {
         
         let navStyle = UINavigationBar.appearance()
-        navStyle.barTintColor = UIColor(red: 46.0 / 255.0, green: 135.0 / 255.0, blue: 174.0 / 255.0, alpha: 1.0)
+        navStyle.barTintColor = UIColor(red: 50.0 / 255.0, green: 120.0 / 255.0, blue: 215.0 / 255.0, alpha: 0.25)
         // navigation bar button color
-        navStyle.tintColor = UIColor.blackColor().colorWithAlphaComponent(0.75)
+        navStyle.tintColor = UIColor.blueColor()
         // navigation title color
-        navStyle.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.darkGrayColor()]
+        navStyle.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
     }
 
     func applicationWillResignActive(application: UIApplication) {

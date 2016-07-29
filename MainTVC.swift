@@ -50,7 +50,7 @@ class MainTVC: UITableViewController, NSFetchedResultsControllerDelegate {
         
         // cell properties
         
-        self.tableView.rowHeight = 75
+        self.tableView.rowHeight = 65
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "bg.png"))
         
     }
@@ -106,7 +106,7 @@ class MainTVC: UITableViewController, NSFetchedResultsControllerDelegate {
         let dosageml = rx.dosageml
         let time = rx.time
         
-        cell.detailTextLabel?.text = "\(dosagemg!) mg. / \(dosageml!) ml. at \(time!) by \(prescribedBy!)."
+        cell.detailTextLabel?.text = "\(dosagemg!) mg. Or \(dosageml!) ml. at \(time!) by \(prescribedBy!)."
         
         return cell
     }
