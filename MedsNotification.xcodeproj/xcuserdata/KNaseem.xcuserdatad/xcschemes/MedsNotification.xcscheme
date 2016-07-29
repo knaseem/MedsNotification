@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E93F2DB01D46B97100EBFAAB"
-               BuildableName = "MedsNotification.app"
-               BlueprintName = "MedsNotification"
+               BuildableName = "MedsNotify.app"
+               BlueprintName = "MedsNotify"
                ReferencedContainer = "container:MedsNotification.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E93F2DB01D46B97100EBFAAB"
-            BuildableName = "MedsNotification.app"
-            BlueprintName = "MedsNotification"
+            BuildableName = "MedsNotify.app"
+            BlueprintName = "MedsNotify"
             ReferencedContainer = "container:MedsNotification.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E93F2DB01D46B97100EBFAAB"
-            BuildableName = "MedsNotification.app"
-            BlueprintName = "MedsNotification"
+            BuildableName = "MedsNotify.app"
+            BlueprintName = "MedsNotify"
             ReferencedContainer = "container:MedsNotification.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E93F2DB01D46B97100EBFAAB"
-            BuildableName = "MedsNotification.app"
-            BlueprintName = "MedsNotification"
+            BuildableName = "MedsNotify.app"
+            BlueprintName = "MedsNotify"
             ReferencedContainer = "container:MedsNotification.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

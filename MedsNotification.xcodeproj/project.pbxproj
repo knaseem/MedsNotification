@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		E923CBAC1D4AA767006719BC /* Rx+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E923CBAD1D4AA767006719BC /* Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
-		E93F2DB11D46B97100EBFAAB /* MedsNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedsNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93F2DB11D46B97100EBFAAB /* MedsNotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedsNotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93F2DB41D46B97100EBFAAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E93F2DB91D46B97100EBFAAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E93F2DBC1D46B97100EBFAAB /* MedsNotification.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedsNotification.xcdatamodel; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		E93F2DB21D46B97100EBFAAB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E93F2DB11D46B97100EBFAAB /* MedsNotification.app */,
+				E93F2DB11D46B97100EBFAAB /* MedsNotify.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +82,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E93F2DB01D46B97100EBFAAB /* MedsNotification */ = {
+		E93F2DB01D46B97100EBFAAB /* MedsNotify */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E93F2DC61D46B97100EBFAAB /* Build configuration list for PBXNativeTarget "MedsNotification" */;
+			buildConfigurationList = E93F2DC61D46B97100EBFAAB /* Build configuration list for PBXNativeTarget "MedsNotify" */;
 			buildPhases = (
 				E93F2DAD1D46B97100EBFAAB /* Sources */,
 				E93F2DAE1D46B97100EBFAAB /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = MedsNotification;
+			name = MedsNotify;
 			productName = MedsNotification;
-			productReference = E93F2DB11D46B97100EBFAAB /* MedsNotification.app */;
+			productReference = E93F2DB11D46B97100EBFAAB /* MedsNotify.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -128,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E93F2DB01D46B97100EBFAAB /* MedsNotification */,
+				E93F2DB01D46B97100EBFAAB /* MedsNotify */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +304,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E93F2DC61D46B97100EBFAAB /* Build configuration list for PBXNativeTarget "MedsNotification" */ = {
+		E93F2DC61D46B97100EBFAAB /* Build configuration list for PBXNativeTarget "MedsNotify" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E93F2DC71D46B97100EBFAAB /* Debug */,
