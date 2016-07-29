@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navStyle = UINavigationBar.appearance()
         navStyle.barTintColor = UIColor(red: 50.0 / 255.0, green: 120.0 / 255.0, blue: 215.0 / 255.0, alpha: 0.25)
         // navigation bar button color
-        navStyle.tintColor = UIColor.blueColor()
+        navStyle.tintColor = UIColor.whiteColor()
         // navigation title color
         navStyle.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor()]
     }
