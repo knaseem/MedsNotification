@@ -92,9 +92,9 @@ class MainTVC: UITableViewController, NSFetchedResultsControllerDelegate {
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor.clearColor()
         } else {
-            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
-            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
-            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.3)
+            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.1)
+            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.1)
         }
         
         // Configure the cell...
